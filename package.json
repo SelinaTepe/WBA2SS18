@@ -1,0 +1,26 @@
+{
+  "name": "wba2ss18",
+  "version": "1.0.0",
+  "description": "SwapPapers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SelinaTepe/WBA2SS18.git"
+  },
+  "author": "Selina Tepe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SelinaTepe/WBA2SS18/issues"
+  },
+  "homepage": "https://github.com/SelinaTepe/WBA2SS18#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "request": "^2.88.0"
+  }
+}
