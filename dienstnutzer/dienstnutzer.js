@@ -35,7 +35,7 @@ app.get('/users', function(req, res){
   request(url, function(err, response, body){
     body = JSON.parse(body);
   //  console.log(body);
-    res.json(JSON.parse(body));
+    res.json(body);
   });
 });
 
