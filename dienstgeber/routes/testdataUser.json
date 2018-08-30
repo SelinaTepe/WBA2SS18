@@ -1,0 +1,22 @@
+{
+  "user0":{
+    "id":"0",
+    "name":"Schmitz",
+    "vorname":"Uwe",
+    "city":"Bonn"
+
+    },
+    "user1":{
+      "id":"1",
+      "name":"Mueller",
+      "vorname":"Hugo",
+      "city":"Koeln"
+
+      },
+      "user2":{
+        "id":"2",
+        "name":"Schmidt",
+        "vorname":"Birgit",
+        "city":"Gummersbach"
+        }
+      }
