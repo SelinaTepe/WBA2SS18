@@ -80,11 +80,6 @@ router.put("/name/:id", function(req, res){
     });
     console.log("Dokument wurde aktualisiert:\n" , doc);
     fs.writeFile(__dirname + "/" + "newDocuments.json", JSON.stringify({ doc }), function(err){
-      if (err) {
-             console.error("write error:  " + error.message);
-           } else {
-             console.log("Successful Write to newDocument.json");
-           }
       });
     });
   });

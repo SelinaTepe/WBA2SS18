@@ -8,6 +8,9 @@ var http = require('http');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
+//global.data = require("./data");
+
+
 router.get('/', function (req, res){
   fs.readFile(__dirname + "/" + "testdataUser.json", "utf8", function(err, data){
     console.log(data);
