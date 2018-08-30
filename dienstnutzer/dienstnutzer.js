@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const fs = require("fs");
 
+
 var dHost = 'http://localhost';
 var dPort = 3000;
 var dURL = 'https://wba2ss18swappapers.herokuapp.com'
@@ -24,7 +25,6 @@ fayeservice.attach(server);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 
 //User
@@ -57,8 +57,9 @@ app.get('/users/:id', function(req, res){
     body = JSON.parse(body);
     console.log(body);
     res.json(body);
+    });
   });
-});
+
 
 
 app.post('/users', function(req, res){
@@ -107,7 +108,7 @@ app.put('/users/:id', function(req, res){
     }
 
     request(options, function(err, response, body){
-        console.log("User " + id + "wurde bearbeitet/ erstellt: " ,user);
+        console.log("Der User mit der id " + id + "wurde bearbeitet/ erstellt: " ,user);
         res.json(body);
     });
 
@@ -194,7 +195,7 @@ app.post('/documents', function(req, res){
     request(options, function(err, response, body){
         res.json(body);
     });
-        console.log("Neues Dokument wurde hinzugefuegt: ", doc);
+        console.log("Neues Dokument wurde hinzugefuegt: \n", doc);
 });
 
 app.put('/documents/name/:id', function(req, res){
@@ -222,7 +223,7 @@ app.put('/documents/name/:id', function(req, res){
     request(options, function(err, response, body){
         res.json(body);
     });
-console.log("Dokument wurde bearbeitet/ erstellt: " ,doc);
+console.log("Dokument wurde bearbeitet/ erstellt:\n " ,doc);
 });
 
 app.delete('/documents/newDocuments/:id', function(req, res){
@@ -243,7 +244,7 @@ app.delete('/documents/newDocuments/:id', function(req, res){
 
 
 app.listen(8080, function(){
-    console.log("Dienstnutzer ist verfügbar nun auf Port 8080");
+    console.log("Dienstnutzer ist nun verfügbar auf Port 8080");
 });
 
 
