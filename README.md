@@ -5,7 +5,7 @@ SwapPapers
 - Programm starten: node server.js dienstnutzer/dienstnutzer
 - Folgende abfragen sind mittels testclients wie Postman möglich:
 
-- users:
+Ressource users:
 
 GET auf users                                                
 GET auf users/:id  
@@ -17,10 +17,10 @@ PUT auf users/:id
 
 DELETE auf users/:id 
 
-- documents:
+Ressource documents:
 
-GET auf documents/name/:id
-GET auf documents/isbn/:isbn
+GET auf documents/name/:id                                                          
+GET auf documents/isbn/:isbn                                                  
 GET auf documents/newDocuments 
                                                                                  
 POST auf documents
