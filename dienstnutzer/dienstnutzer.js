@@ -34,7 +34,7 @@ app.get('/users', function(req, res){
 
   request(url, function(err, response, body){
     body = JSON.parse(body);
-  //  console.log(body);
+    console.log(body);
     res.json(body);
   });
 });
@@ -44,6 +44,7 @@ app.get('/users/newUsers', function(req, res){
 
   request(url, function(err, response, body){
     body = JSON.parse(body);
+    console.log(body);
     res.json(body);
   });
 });
@@ -54,6 +55,7 @@ app.get('/users/:id', function(req, res){
 
   request(url, function(err, response, body){
     body = JSON.parse(body);
+    console.log(body);
     res.json(body);
   });
 });
@@ -130,6 +132,7 @@ app.delete('/users/:id', function(req, res){
     var url = dURL + '/users/' + req.params.id;
 
     request.delete(url, function(err, response, body){
+      console.log("User erfolgreich geloescht");
         res.json(body);
     });
 });
@@ -142,6 +145,7 @@ app.get('/documents/name/:id', function(req, res){
     var url = dURL + '/documents/name/'+ req.params.id;
 
     request.get(url, function(err, response, body){
+      console.log(body);
         res.json(JSON.parse(body));
     });
 });
@@ -150,6 +154,7 @@ app.get('/documents/isbn/:isbn', function(req, res){
     var url = dURL + '/documents/isbn/'+ req.params.isbn;
 
     request.get(url, function(err, response, body){
+      console.log(body);
         res.json(JSON.parse(body));
     });
 });
@@ -158,6 +163,7 @@ app.get('/documents/newDocuments', function(req, res){
     var url = dURL + '/documents/newDocuments';
 
     request.get(url, function(err, response, body){
+      console.log(body);
         res.json(JSON.parse(body));
     });
 });
