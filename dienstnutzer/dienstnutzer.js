@@ -8,7 +8,8 @@ const fs = require("fs");
 
 var dHost = 'http://localhost';
 var dPort = 3000;
-var dURL = dHost + ':' + dPort;
+var dURL = 'https://wba2ss18swappapers.herokuapp.com'
+//var dURL = process.env.SERVICEURL || dHost + ':' + dPort;
 
 
 var server = http.createServer();
@@ -33,7 +34,8 @@ app.get('/users', function(req, res){
 
   request(url, function(err, response, body){
     body = JSON.parse(body);
-    res.json(body);
+  //  console.log(body);
+    res.json(JSON.parse(body));
   });
 });
 
