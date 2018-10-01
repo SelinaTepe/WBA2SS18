@@ -16,10 +16,9 @@ router.get('/name/:id', function(req, res){
 
   fs.writeFile(__dirname + "/" + "documents.json", JSON.stringify(body), function(err){
 console.log(body);
-res.send(JSON.parse(body));
+res.status(200).end(body);
 });
 });
-res.status(200).end();
 });
 
 
@@ -28,10 +27,9 @@ router.get('/isbn/:isbn', function(req, res){
 }, function(error, response, body){
   fs.writeFile(__dirname + "/" + "documents.json", JSON.stringify(body), function(err){
     console.log(body);
-    res.send(JSON.parse(body));
+    res.status(200).end(body);
   });
 });
-res.status(200).end();
 });
 
 
@@ -52,9 +50,11 @@ router.post('/', function(req, res){
   });
   console.log(doc);
   fs.writeFile(__dirname + "/" + 'newDocuments.json', JSON.stringify({ doc }), function(err){
-
   });
 });
+
+
+
 
 router.get('/newDocuments', function(req, res){
   fs.readFile(__dirname + "/" + "newDocuments.json", "utf8", function(err, data){
@@ -85,7 +85,7 @@ router.put("/name/:id", function(req, res){
       if (err) {
              console.error("write error:  " + error.message);
            } else {
-             console.log("Successful Write to newDocument.json");
+             console.log("Dokument wurde bearbeitet");
            }
       });
     });

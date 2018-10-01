@@ -33,7 +33,7 @@ app.get('/users', function(req, res){
   var url = dURL+ '/users';
 
   request(url, function(err, response, body){
-    body = JSON.parse(body);
+  body = JSON.parse(body);
     console.log(body);
     res.json(body);
   });
